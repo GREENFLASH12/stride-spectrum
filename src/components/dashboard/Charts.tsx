@@ -183,10 +183,23 @@ export function Charts({ days }: { days: DayProfile[] }) {
 
       <section className="panel p-5 sm:p-6 lg:col-span-2">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="text-base font-semibold">Freshness balance (TSB)</h2>
-          <span className="text-[0.7rem] text-muted-foreground">
-            above zero = fresh · below = fatigued
-          </span>
+          <div>
+            <h2 className="text-base font-semibold">Freshness balance (TSB)</h2>
+            <span className="text-[0.7rem] text-muted-foreground">
+              above zero = fresh · below = fatigued
+            </span>
+          </div>
+          <div className="text-right">
+            <div
+              className="num text-lg font-bold leading-none"
+              style={{ color: "var(--lime)" }}
+            >
+              {fmt(lastTsb.tsb)}
+            </div>
+            <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
+              TSB today
+            </div>
+          </div>
         </div>
         <div className="mt-4 h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">
