@@ -77,7 +77,8 @@ function ChartTooltip({ active, payload, label }: any) {
 
 function lastValue(data: Row[], key: MetricKey): number | null {
   for (let i = data.length - 1; i >= 0; i--) {
-    if (data[i][key] !== null) return data[i][key];
+    const v = data[i]?.[key];
+    if (v !== null && v !== undefined) return v;
   }
   return null;
 }
