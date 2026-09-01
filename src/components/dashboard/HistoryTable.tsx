@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { ProfileBadge } from "./ProfileBadge";
 import { GROUP_STYLES, fmt, groupOf, shortDate, type DayProfile } from "@/lib/snapshot";
 
@@ -62,9 +62,8 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
               const g = GROUP_STYLES[groupOf(d)];
               const isOpen = open === d.date;
               return (
-                <>
+                <Fragment key={d.date}>
                   <tr
-                    key={d.date}
                     className={`${g.row} align-middle transition-colors hover:bg-surface-2/60`}
                   >
                     <td className="num rounded-l-xl px-3 py-2.5 text-muted-foreground">
@@ -92,7 +91,7 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
                     </td>
                   </tr>
                   {isOpen && (
-                    <tr key={`${d.date}-why`}>
+                    <tr>
                       <td colSpan={7} className="rounded-xl bg-surface-2/50 px-4 py-3">
                         <ul className="num grid gap-1.5 text-xs text-muted-foreground sm:grid-cols-2">
                           {d.reasons.map((r) => (
@@ -105,7 +104,7 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
                       </td>
                     </tr>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </tbody>
