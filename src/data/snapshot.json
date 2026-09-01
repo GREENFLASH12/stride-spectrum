@@ -1,0 +1,2839 @@
+{
+ "generated_at": "2026-08-31T20:41:27Z",
+ "athlete": "athlete i344505",
+ "engine": "0.1.0",
+ "profiles": [
+  {
+   "date": "2026-05-26",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -6.6%",
+    "W@constVE +1.0%",
+    "HRV -9.5% RHR +0.2 bpm",
+    "TSB -12.1",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -12.1"
+   ],
+   "signals": {
+    "tsb": -12.1,
+    "hrv_delta_pct": -9.5,
+    "rhr_delta_bpm": 0.2,
+    "ve_at_anchor_delta_pct": -6.6,
+    "power_at_const_ve_delta_pct": 1.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 7,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-05-27",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -5.5%",
+    "W@constVE -3.1%",
+    "HRV -1.3% RHR +2.1 bpm",
+    "TSB -17.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -17.0"
+   ],
+   "signals": {
+    "tsb": -17.0,
+    "hrv_delta_pct": -1.3,
+    "rhr_delta_bpm": 2.1,
+    "ve_at_anchor_delta_pct": -5.5,
+    "power_at_const_ve_delta_pct": -3.1,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 4,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-05-28",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -5.6%",
+    "W@constVE -2.0%",
+    "HRV -5.3% RHR -5.4 bpm",
+    "TSB -12.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -12.7"
+   ],
+   "signals": {
+    "tsb": -12.7,
+    "hrv_delta_pct": -5.3,
+    "rhr_delta_bpm": -5.4,
+    "ve_at_anchor_delta_pct": -5.6,
+    "power_at_const_ve_delta_pct": -2.0,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 2,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-05-29",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +5.6%",
+    "W@constVE -0.4%",
+    "HRV -12.2% RHR -4.7 bpm",
+    "TSB -17.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -17.9"
+   ],
+   "signals": {
+    "tsb": -17.9,
+    "hrv_delta_pct": -12.2,
+    "rhr_delta_bpm": -4.7,
+    "ve_at_anchor_delta_pct": 5.6,
+    "power_at_const_ve_delta_pct": -0.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 3,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-05-30",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +9.5%",
+    "W@constVE +3.5%",
+    "HRV +3.2% RHR -1.2 bpm",
+    "TSB -21.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -21.0"
+   ],
+   "signals": {
+    "tsb": -21.0,
+    "hrv_delta_pct": 3.2,
+    "rhr_delta_bpm": -1.2,
+    "ve_at_anchor_delta_pct": 9.5,
+    "power_at_const_ve_delta_pct": 3.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-05-31",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +7.3%",
+    "W@constVE +1.4%",
+    "HRV -12.8% RHR +0.4 bpm",
+    "TSB -21.1",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -21.1"
+   ],
+   "signals": {
+    "tsb": -21.1,
+    "hrv_delta_pct": -12.8,
+    "rhr_delta_bpm": 0.4,
+    "ve_at_anchor_delta_pct": 7.3,
+    "power_at_const_ve_delta_pct": 1.4,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-01",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.5%",
+    "W@constVE +2.6%",
+    "HRV +11.2% RHR +3.4 bpm",
+    "TSB -21.6",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -21.6"
+   ],
+   "signals": {
+    "tsb": -21.6,
+    "hrv_delta_pct": 11.2,
+    "rhr_delta_bpm": 3.4,
+    "ve_at_anchor_delta_pct": 1.5,
+    "power_at_const_ve_delta_pct": 2.6,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-02",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE +6.2%",
+    "HRV +7.5% RHR +2.8 bpm",
+    "TSB -22.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -22.3"
+   ],
+   "signals": {
+    "tsb": -22.3,
+    "hrv_delta_pct": 7.5,
+    "rhr_delta_bpm": 2.8,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": 6.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-03",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +9.4%",
+    "W@constVE -5.0%",
+    "HRV -6.6% RHR -2.7 bpm",
+    "TSB -26.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -26.7"
+   ],
+   "signals": {
+    "tsb": -26.7,
+    "hrv_delta_pct": -6.6,
+    "rhr_delta_bpm": -2.7,
+    "ve_at_anchor_delta_pct": 9.4,
+    "power_at_const_ve_delta_pct": -5.0,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 9,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-06-04",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE -4.0%",
+    "HRV -3.2% RHR +2.7 bpm",
+    "TSB -27.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -27.7"
+   ],
+   "signals": {
+    "tsb": -27.7,
+    "hrv_delta_pct": -3.2,
+    "rhr_delta_bpm": 2.7,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": -4.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-05",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +2.7%",
+    "W@constVE +1.9%",
+    "HRV -5.5% RHR -5.4 bpm",
+    "TSB -31.5",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -31.5"
+   ],
+   "signals": {
+    "tsb": -31.5,
+    "hrv_delta_pct": -5.5,
+    "rhr_delta_bpm": -5.4,
+    "ve_at_anchor_delta_pct": 2.7,
+    "power_at_const_ve_delta_pct": 1.9,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-06",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +7.6%",
+    "W@constVE +5.4%",
+    "HRV -12.4% RHR +2.9 bpm",
+    "TSB -29.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -29.4"
+   ],
+   "signals": {
+    "tsb": -29.4,
+    "hrv_delta_pct": -12.4,
+    "rhr_delta_bpm": 2.9,
+    "ve_at_anchor_delta_pct": 7.6,
+    "power_at_const_ve_delta_pct": 5.4,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-07",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +0.8%",
+    "W@constVE -4.6%",
+    "HRV \u2014 RHR \u2014",
+    "TSB -30.6",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -30.6"
+   ],
+   "signals": {
+    "tsb": -30.6,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": null,
+    "ve_at_anchor_delta_pct": 0.8,
+    "power_at_const_ve_delta_pct": -4.6,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-06-08",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +4.7%",
+    "W@constVE +6.4%",
+    "HRV -7.8% RHR -2.9 bpm",
+    "TSB -35.8",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -35.8"
+   ],
+   "signals": {
+    "tsb": -35.8,
+    "hrv_delta_pct": -7.8,
+    "rhr_delta_bpm": -2.9,
+    "ve_at_anchor_delta_pct": 4.7,
+    "power_at_const_ve_delta_pct": 6.4,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-09",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -6.0%",
+    "W@constVE -1.5%",
+    "HRV +0.5% RHR -6.1 bpm",
+    "TSB -36.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -36.2"
+   ],
+   "signals": {
+    "tsb": -36.2,
+    "hrv_delta_pct": 0.5,
+    "rhr_delta_bpm": -6.1,
+    "ve_at_anchor_delta_pct": -6.0,
+    "power_at_const_ve_delta_pct": -1.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 9,
+    "confidence": 0.5
+   }
+  },
+  {
+   "date": "2026-06-10",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -2.0%",
+    "W@constVE +2.4%",
+    "HRV +13.4% RHR +1.3 bpm",
+    "TSB -33.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -33.9"
+   ],
+   "signals": {
+    "tsb": -33.9,
+    "hrv_delta_pct": 13.4,
+    "rhr_delta_bpm": 1.3,
+    "ve_at_anchor_delta_pct": -2.0,
+    "power_at_const_ve_delta_pct": 2.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 13,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-06-11",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +4.3%",
+    "W@constVE +4.2%",
+    "HRV +1.1% RHR +0.0 bpm",
+    "TSB -33.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -33.4"
+   ],
+   "signals": {
+    "tsb": -33.4,
+    "hrv_delta_pct": 1.1,
+    "rhr_delta_bpm": 0.0,
+    "ve_at_anchor_delta_pct": 4.3,
+    "power_at_const_ve_delta_pct": 4.2,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-12",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -7.4%",
+    "W@constVE -5.6%",
+    "HRV +1.5% RHR -3.1 bpm",
+    "TSB -36.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -36.7"
+   ],
+   "signals": {
+    "tsb": -36.7,
+    "hrv_delta_pct": 1.5,
+    "rhr_delta_bpm": -3.1,
+    "ve_at_anchor_delta_pct": -7.4,
+    "power_at_const_ve_delta_pct": -5.6,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 13,
+    "confidence": 0.8
+   }
+  },
+  {
+   "date": "2026-06-13",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -3.6%",
+    "W@constVE -3.1%",
+    "HRV +14.7% RHR -3.0 bpm",
+    "TSB -30.8",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -30.8"
+   ],
+   "signals": {
+    "tsb": -30.8,
+    "hrv_delta_pct": 14.7,
+    "rhr_delta_bpm": -3.0,
+    "ve_at_anchor_delta_pct": -3.6,
+    "power_at_const_ve_delta_pct": -3.1,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-14",
+   "profile": "deep_fatigue",
+   "state": "deep_fatigue",
+   "reasons": [
+    "VE@anchor +14.4%",
+    "W@constVE -6.2%",
+    "HRV -29.5% RHR +4.7 bpm",
+    "TSB -48.8",
+    "LOAD accumulating; TSB -48.8, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -48.8,
+    "hrv_delta_pct": -29.5,
+    "rhr_delta_bpm": 4.7,
+    "ve_at_anchor_delta_pct": 14.4,
+    "power_at_const_ve_delta_pct": -6.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "full rest or 30min spin \u2014 no structure today",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-15",
+   "profile": "deep_fatigue",
+   "state": "deep_fatigue",
+   "reasons": [
+    "VE@anchor +16.0%",
+    "W@constVE -5.2%",
+    "HRV -31.6% RHR +4.7 bpm",
+    "TSB -64.7",
+    "LOAD accumulating; TSB -64.7, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -64.7,
+    "hrv_delta_pct": -31.6,
+    "rhr_delta_bpm": 4.7,
+    "ve_at_anchor_delta_pct": 16.0,
+    "power_at_const_ve_delta_pct": -5.2,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "full rest or 30min spin \u2014 no structure today",
+   "forecast": {
+    "days": 3,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-06-16",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +4.2%",
+    "W@constVE +1.7%",
+    "HRV -0.0% RHR +0.2 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -0.0,
+    "rhr_delta_bpm": 0.2,
+    "ve_at_anchor_delta_pct": 4.2,
+    "power_at_const_ve_delta_pct": 1.7,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 1,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-06-17",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -5.2%",
+    "W@constVE +6.8%",
+    "HRV -10.9% RHR +1.2 bpm",
+    "TSB -55.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -55.3"
+   ],
+   "signals": {
+    "tsb": -55.3,
+    "hrv_delta_pct": -10.9,
+    "rhr_delta_bpm": 1.2,
+    "ve_at_anchor_delta_pct": -5.2,
+    "power_at_const_ve_delta_pct": 6.8,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 4,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-06-18",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -6.8%",
+    "W@constVE +3.6%",
+    "HRV +2.3% RHR +2.2 bpm",
+    "TSB -57.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -57.4"
+   ],
+   "signals": {
+    "tsb": -57.4,
+    "hrv_delta_pct": 2.3,
+    "rhr_delta_bpm": 2.2,
+    "ve_at_anchor_delta_pct": -6.8,
+    "power_at_const_ve_delta_pct": 3.6,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-19",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +2.2%",
+    "W@constVE +5.3%",
+    "HRV -10.1% RHR \u2014",
+    "TSB -52.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -52.9"
+   ],
+   "signals": {
+    "tsb": -52.9,
+    "hrv_delta_pct": -10.1,
+    "rhr_delta_bpm": null,
+    "ve_at_anchor_delta_pct": 2.2,
+    "power_at_const_ve_delta_pct": 5.3,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 8,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-06-20",
+   "profile": "adapting_well",
+   "state": "adapting_well",
+   "reasons": [
+    "VE@anchor -14.1%",
+    "W@constVE +8.3%",
+    "HRV +11.1% RHR -5.5 bpm",
+    "TSB -57.5",
+    "WINDOW OPEN trough -64.5 \u2192 TSB -57.5, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": -57.5,
+    "hrv_delta_pct": 11.1,
+    "rhr_delta_bpm": -5.5,
+    "ve_at_anchor_delta_pct": -14.1,
+    "power_at_const_ve_delta_pct": 8.3,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-21",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +10.2%",
+    "W@constVE -0.2%",
+    "HRV +2.9% RHR +1.4 bpm",
+    "TSB -57.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -57.4"
+   ],
+   "signals": {
+    "tsb": -57.4,
+    "hrv_delta_pct": 2.9,
+    "rhr_delta_bpm": 1.4,
+    "ve_at_anchor_delta_pct": 10.2,
+    "power_at_const_ve_delta_pct": -0.2,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 9,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-06-22",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +9.5%",
+    "W@constVE +6.2%",
+    "HRV +14.2% RHR +0.7 bpm",
+    "TSB -57.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -57.7"
+   ],
+   "signals": {
+    "tsb": -57.7,
+    "hrv_delta_pct": 14.2,
+    "rhr_delta_bpm": 0.7,
+    "ve_at_anchor_delta_pct": 9.5,
+    "power_at_const_ve_delta_pct": 6.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 7,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-06-23",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -6.5%",
+    "W@constVE +2.7%",
+    "HRV -11.8% RHR -4.4 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -11.8,
+    "rhr_delta_bpm": -4.4,
+    "ve_at_anchor_delta_pct": -6.5,
+    "power_at_const_ve_delta_pct": 2.7,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-24",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.4%",
+    "W@constVE +3.7%",
+    "HRV -6.4% RHR -5.5 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -6.4,
+    "rhr_delta_bpm": -5.5,
+    "ve_at_anchor_delta_pct": 1.4,
+    "power_at_const_ve_delta_pct": 3.7,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-25",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -1.2%",
+    "W@constVE -3.5%",
+    "HRV -1.1% RHR -1.3 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -1.1,
+    "rhr_delta_bpm": -1.3,
+    "ve_at_anchor_delta_pct": -1.2,
+    "power_at_const_ve_delta_pct": -3.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-26",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -2.1%",
+    "W@constVE +6.5%",
+    "HRV -2.5% RHR -1.3 bpm",
+    "TSB -55.6",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -55.6"
+   ],
+   "signals": {
+    "tsb": -55.6,
+    "hrv_delta_pct": -2.5,
+    "rhr_delta_bpm": -1.3,
+    "ve_at_anchor_delta_pct": -2.1,
+    "power_at_const_ve_delta_pct": 6.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 5,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-06-27",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +8.4%",
+    "W@constVE +5.0%",
+    "HRV -8.6% RHR +1.3 bpm",
+    "TSB -50.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -50.7"
+   ],
+   "signals": {
+    "tsb": -50.7,
+    "hrv_delta_pct": -8.6,
+    "rhr_delta_bpm": 1.3,
+    "ve_at_anchor_delta_pct": 8.4,
+    "power_at_const_ve_delta_pct": 5.0,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-06-28",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE +2.9%",
+    "HRV +7.0% RHR -6.0 bpm",
+    "TSB -49.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -49.9"
+   ],
+   "signals": {
+    "tsb": -49.9,
+    "hrv_delta_pct": 7.0,
+    "rhr_delta_bpm": -6.0,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": 2.9,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 5,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-06-29",
+   "profile": "overreaching_metabolic_dominant",
+   "state": "overreaching_metabolic_dominant",
+   "reasons": [
+    "VE@anchor +14.5%",
+    "W@constVE -11.6%",
+    "HRV -10.9% RHR +2.5 bpm",
+    "TSB -57.6",
+    "LOAD accumulating; TSB -57.6, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -57.6,
+    "hrv_delta_pct": -10.9,
+    "rhr_delta_bpm": 2.5,
+    "ve_at_anchor_delta_pct": 14.5,
+    "power_at_const_ve_delta_pct": -11.6,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "metabolic load high \u2014 cap at ~60% FTP, extend sleep",
+   "forecast": {
+    "days": 12,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-06-30",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -4.0%",
+    "W@constVE -1.9%",
+    "HRV -9.2% RHR -6.4 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -9.2,
+    "rhr_delta_bpm": -6.4,
+    "ve_at_anchor_delta_pct": -4.0,
+    "power_at_const_ve_delta_pct": -1.9,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-01",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -7.3%",
+    "W@constVE -5.8%",
+    "HRV +10.1% RHR +3.9 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 10.1,
+    "rhr_delta_bpm": 3.9,
+    "ve_at_anchor_delta_pct": -7.3,
+    "power_at_const_ve_delta_pct": -5.8,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-02",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.9%",
+    "W@constVE +4.8%",
+    "HRV +10.6% RHR -2.2 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 10.6,
+    "rhr_delta_bpm": -2.2,
+    "ve_at_anchor_delta_pct": 1.9,
+    "power_at_const_ve_delta_pct": 4.8,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 4,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-03",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -1.0%",
+    "W@constVE -5.3%",
+    "HRV \u2014 RHR -2.5 bpm",
+    "TSB -55.5",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -55.5"
+   ],
+   "signals": {
+    "tsb": -55.5,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": -2.5,
+    "ve_at_anchor_delta_pct": -1.0,
+    "power_at_const_ve_delta_pct": -5.3,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 1,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-07-04",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -2.4%",
+    "W@constVE -2.9%",
+    "HRV \u2014 RHR +0.4 bpm",
+    "TSB -51.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -51.4"
+   ],
+   "signals": {
+    "tsb": -51.4,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": 0.4,
+    "ve_at_anchor_delta_pct": -2.4,
+    "power_at_const_ve_delta_pct": -2.9,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.8
+   }
+  },
+  {
+   "date": "2026-07-05",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +11.3%",
+    "W@constVE -2.0%",
+    "HRV +2.4% RHR -4.3 bpm",
+    "TSB -45.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -45.7"
+   ],
+   "signals": {
+    "tsb": -45.7,
+    "hrv_delta_pct": 2.4,
+    "rhr_delta_bpm": -4.3,
+    "ve_at_anchor_delta_pct": 11.3,
+    "power_at_const_ve_delta_pct": -2.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 11,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-06",
+   "profile": "functional_overreaching",
+   "state": "functional_overreaching",
+   "reasons": [
+    "VE@anchor +3.5%",
+    "W@constVE -4.4%",
+    "HRV -37.9% RHR +1.8 bpm",
+    "TSB -53.6",
+    "LOAD accumulating; TSB -53.6, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -53.6,
+    "hrv_delta_pct": -37.9,
+    "rhr_delta_bpm": 1.8,
+    "ve_at_anchor_delta_pct": 3.5,
+    "power_at_const_ve_delta_pct": -4.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "no intensity today \u2014 easy Z1/endurance cap ~65% FTP",
+   "forecast": {
+    "days": 9,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-07",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +3.9%",
+    "W@constVE +3.9%",
+    "HRV +12.8% RHR +1.6 bpm",
+    "TSB -57.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -57.7"
+   ],
+   "signals": {
+    "tsb": -57.7,
+    "hrv_delta_pct": 12.8,
+    "rhr_delta_bpm": 1.6,
+    "ve_at_anchor_delta_pct": 3.9,
+    "power_at_const_ve_delta_pct": 3.9,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-08",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +4.5%",
+    "W@constVE +3.5%",
+    "HRV +11.1% RHR +2.8 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 11.1,
+    "rhr_delta_bpm": 2.8,
+    "ve_at_anchor_delta_pct": 4.5,
+    "power_at_const_ve_delta_pct": 3.5,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-09",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE +3.2%",
+    "HRV -13.5% RHR +0.6 bpm",
+    "TSB -54.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -54.2"
+   ],
+   "signals": {
+    "tsb": -54.2,
+    "hrv_delta_pct": -13.5,
+    "rhr_delta_bpm": 0.6,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": 3.2,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-10",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE -5.8%",
+    "HRV -2.7% RHR -2.0 bpm",
+    "TSB -48.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -48.7"
+   ],
+   "signals": {
+    "tsb": -48.7,
+    "hrv_delta_pct": -2.7,
+    "rhr_delta_bpm": -2.0,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": -5.8,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-11",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +5.2%",
+    "W@constVE -5.1%",
+    "HRV +1.1% RHR -1.1 bpm",
+    "TSB -45.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -45.7"
+   ],
+   "signals": {
+    "tsb": -45.7,
+    "hrv_delta_pct": 1.1,
+    "rhr_delta_bpm": -1.1,
+    "ve_at_anchor_delta_pct": 5.2,
+    "power_at_const_ve_delta_pct": -5.1,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 13,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-12",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -0.3%",
+    "W@constVE +0.2%",
+    "HRV +15.3% RHR \u2014",
+    "TSB -42.8",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -42.8"
+   ],
+   "signals": {
+    "tsb": -42.8,
+    "hrv_delta_pct": 15.3,
+    "rhr_delta_bpm": null,
+    "ve_at_anchor_delta_pct": -0.3,
+    "power_at_const_ve_delta_pct": 0.2,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 10,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-13",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +3.4%",
+    "W@constVE -5.8%",
+    "HRV +8.3% RHR -3.7 bpm",
+    "TSB -45.8",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -45.8"
+   ],
+   "signals": {
+    "tsb": -45.8,
+    "hrv_delta_pct": 8.3,
+    "rhr_delta_bpm": -3.7,
+    "ve_at_anchor_delta_pct": 3.4,
+    "power_at_const_ve_delta_pct": -5.8,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 8,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-14",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -5.6%",
+    "W@constVE +5.6%",
+    "HRV -0.1% RHR -1.9 bpm",
+    "TSB -45.6",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -45.6"
+   ],
+   "signals": {
+    "tsb": -45.6,
+    "hrv_delta_pct": -0.1,
+    "rhr_delta_bpm": -1.9,
+    "ve_at_anchor_delta_pct": -5.6,
+    "power_at_const_ve_delta_pct": 5.6,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 2,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-15",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -3.8%",
+    "W@constVE +6.3%",
+    "HRV \u2014 RHR -4.0 bpm",
+    "TSB -40.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -40.0"
+   ],
+   "signals": {
+    "tsb": -40.0,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": -4.0,
+    "ve_at_anchor_delta_pct": -3.8,
+    "power_at_const_ve_delta_pct": 6.3,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-16",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +6.1%",
+    "W@constVE -3.0%",
+    "HRV +1.3% RHR +2.8 bpm",
+    "TSB -36.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -36.2"
+   ],
+   "signals": {
+    "tsb": -36.2,
+    "hrv_delta_pct": 1.3,
+    "rhr_delta_bpm": 2.8,
+    "ve_at_anchor_delta_pct": 6.1,
+    "power_at_const_ve_delta_pct": -3.0,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-17",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -0.5%",
+    "W@constVE -4.4%",
+    "HRV \u2014 RHR -2.4 bpm",
+    "TSB -37.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -37.3"
+   ],
+   "signals": {
+    "tsb": -37.3,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": -2.4,
+    "ve_at_anchor_delta_pct": -0.5,
+    "power_at_const_ve_delta_pct": -4.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 4,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-18",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -0.1%",
+    "W@constVE +7.0%",
+    "HRV \u2014 RHR -2.9 bpm",
+    "TSB -32.5",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -32.5"
+   ],
+   "signals": {
+    "tsb": -32.5,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": -2.9,
+    "ve_at_anchor_delta_pct": -0.1,
+    "power_at_const_ve_delta_pct": 7.0,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-19",
+   "profile": "deep_fatigue",
+   "state": "deep_fatigue",
+   "reasons": [
+    "VE@anchor +14.3%",
+    "W@constVE -11.0%",
+    "HRV -44.1% RHR +6.3 bpm",
+    "TSB -47.1",
+    "LOAD accumulating; TSB -47.1, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -47.1,
+    "hrv_delta_pct": -44.1,
+    "rhr_delta_bpm": 6.3,
+    "ve_at_anchor_delta_pct": 14.3,
+    "power_at_const_ve_delta_pct": -11.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "full rest or 30min spin \u2014 no structure today",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-20",
+   "profile": "overreaching_metabolic_dominant",
+   "state": "overreaching_metabolic_dominant",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE -7.9%",
+    "HRV -11.5% RHR +2.0 bpm",
+    "TSB -60.0",
+    "LOAD accumulating; TSB -60.0, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -60.0,
+    "hrv_delta_pct": -11.5,
+    "rhr_delta_bpm": 2.0,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": -7.9,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "metabolic load high \u2014 cap at ~60% FTP, extend sleep",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-21",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -2.3%",
+    "W@constVE -5.4%",
+    "HRV +8.6% RHR +0.1 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 8.6,
+    "rhr_delta_bpm": 0.1,
+    "ve_at_anchor_delta_pct": -2.3,
+    "power_at_const_ve_delta_pct": -5.4,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 12,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-22",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.7%",
+    "W@constVE +2.7%",
+    "HRV -1.8% RHR -4.4 bpm",
+    "TSB -56.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -56.2"
+   ],
+   "signals": {
+    "tsb": -56.2,
+    "hrv_delta_pct": -1.8,
+    "rhr_delta_bpm": -4.4,
+    "ve_at_anchor_delta_pct": 1.7,
+    "power_at_const_ve_delta_pct": 2.7,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-23",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +11.9%",
+    "W@constVE -0.2%",
+    "HRV -7.4% RHR +3.0 bpm",
+    "TSB -56.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -56.2"
+   ],
+   "signals": {
+    "tsb": -56.2,
+    "hrv_delta_pct": -7.4,
+    "rhr_delta_bpm": 3.0,
+    "ve_at_anchor_delta_pct": 11.9,
+    "power_at_const_ve_delta_pct": -0.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-24",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -4.0%",
+    "W@constVE -5.7%",
+    "HRV -3.0% RHR +1.9 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -3.0,
+    "rhr_delta_bpm": 1.9,
+    "ve_at_anchor_delta_pct": -4.0,
+    "power_at_const_ve_delta_pct": -5.7,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-07-25",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +5.7%",
+    "W@constVE +0.9%",
+    "HRV +3.2% RHR -3.0 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 3.2,
+    "rhr_delta_bpm": -3.0,
+    "ve_at_anchor_delta_pct": 5.7,
+    "power_at_const_ve_delta_pct": 0.9,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 7,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-07-26",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +11.4%",
+    "W@constVE -4.3%",
+    "HRV -4.6% RHR +2.0 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -4.6,
+    "rhr_delta_bpm": 2.0,
+    "ve_at_anchor_delta_pct": 11.4,
+    "power_at_const_ve_delta_pct": -4.3,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-27",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +8.5%",
+    "W@constVE +5.1%",
+    "HRV -2.3% RHR +3.2 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -2.3,
+    "rhr_delta_bpm": 3.2,
+    "ve_at_anchor_delta_pct": 8.5,
+    "power_at_const_ve_delta_pct": 5.1,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-28",
+   "profile": "adapting_well",
+   "state": "adapting_well",
+   "reasons": [
+    "VE@anchor \u2014 (no ride data)",
+    "W@constVE +10.9%",
+    "HRV +26.9% RHR -5.2 bpm",
+    "TSB -55.8",
+    "WINDOW OPEN trough -67.5 \u2192 TSB -55.8, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": -55.8,
+    "hrv_delta_pct": 26.9,
+    "rhr_delta_bpm": -5.2,
+    "ve_at_anchor_delta_pct": null,
+    "power_at_const_ve_delta_pct": 10.9,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-29",
+   "profile": "adapting_well",
+   "state": "adapting_well",
+   "reasons": [
+    "VE@anchor -12.9%",
+    "W@constVE +8.8%",
+    "HRV +22.9% RHR -3.3 bpm",
+    "TSB -58.0",
+    "WINDOW OPEN trough -59.5 \u2192 TSB -58.0, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 22.9,
+    "rhr_delta_bpm": -3.3,
+    "ve_at_anchor_delta_pct": -12.9,
+    "power_at_const_ve_delta_pct": 8.8,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-07-30",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -7.8%",
+    "W@constVE -2.1%",
+    "HRV -7.3% RHR -0.4 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -7.3,
+    "rhr_delta_bpm": -0.4,
+    "ve_at_anchor_delta_pct": -7.8,
+    "power_at_const_ve_delta_pct": -2.1,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_good",
+     "hrv_bad"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 9,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-07-31",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -1.9%",
+    "W@constVE -5.7%",
+    "HRV +14.8% RHR +0.8 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 14.8,
+    "rhr_delta_bpm": 0.8,
+    "ve_at_anchor_delta_pct": -1.9,
+    "power_at_const_ve_delta_pct": -5.7,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 7,
+    "confidence": 0.8
+   }
+  },
+  {
+   "date": "2026-08-01",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +0.4%",
+    "W@constVE +2.9%",
+    "HRV \u2014 RHR -3.3 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": -3.3,
+    "ve_at_anchor_delta_pct": 0.4,
+    "power_at_const_ve_delta_pct": 2.9,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 8,
+    "confidence": 0.8
+   }
+  },
+  {
+   "date": "2026-08-02",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -3.6%",
+    "W@constVE +3.9%",
+    "HRV +10.6% RHR -4.5 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 10.6,
+    "rhr_delta_bpm": -4.5,
+    "ve_at_anchor_delta_pct": -3.6,
+    "power_at_const_ve_delta_pct": 3.9,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-03",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +3.9%",
+    "W@constVE +6.0%",
+    "HRV +13.3% RHR -6.4 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 13.3,
+    "rhr_delta_bpm": -6.4,
+    "ve_at_anchor_delta_pct": 3.9,
+    "power_at_const_ve_delta_pct": 6.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 1,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-08-04",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -5.7%",
+    "W@constVE -5.0%",
+    "HRV +7.4% RHR -3.5 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 7.4,
+    "rhr_delta_bpm": -3.5,
+    "ve_at_anchor_delta_pct": -5.7,
+    "power_at_const_ve_delta_pct": -5.0,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-05",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -0.5%",
+    "W@constVE -1.7%",
+    "HRV +5.9% RHR -2.8 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": 5.9,
+    "rhr_delta_bpm": -2.8,
+    "ve_at_anchor_delta_pct": -0.5,
+    "power_at_const_ve_delta_pct": -1.7,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 2,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-08-06",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -1.8%",
+    "W@constVE +4.5%",
+    "HRV \u2014 RHR +1.5 bpm",
+    "TSB -54.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -54.9"
+   ],
+   "signals": {
+    "tsb": -54.9,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": 1.5,
+    "ve_at_anchor_delta_pct": -1.8,
+    "power_at_const_ve_delta_pct": 4.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-07",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -7.4%",
+    "W@constVE -0.7%",
+    "HRV -3.1% RHR +2.9 bpm",
+    "TSB -58.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -58.0"
+   ],
+   "signals": {
+    "tsb": -58,
+    "hrv_delta_pct": -3.1,
+    "rhr_delta_bpm": 2.9,
+    "ve_at_anchor_delta_pct": -7.4,
+    "power_at_const_ve_delta_pct": -0.7,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-08",
+   "profile": "functional_overreaching",
+   "state": "functional_overreaching",
+   "reasons": [
+    "VE@anchor +3.4%",
+    "W@constVE -3.6%",
+    "HRV -36.9% RHR +1.6 bpm",
+    "TSB -62.4",
+    "LOAD accumulating; TSB -62.4, autonomic suppressed"
+   ],
+   "signals": {
+    "tsb": -62.4,
+    "hrv_delta_pct": -36.9,
+    "rhr_delta_bpm": 1.6,
+    "ve_at_anchor_delta_pct": 3.4,
+    "power_at_const_ve_delta_pct": -3.6,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "no intensity today \u2014 easy Z1/endurance cap ~65% FTP",
+   "forecast": {
+    "days": 12,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-08-09",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +3.9%",
+    "W@constVE +4.5%",
+    "HRV \u2014 RHR +0.9 bpm",
+    "TSB -57.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -57.3"
+   ],
+   "signals": {
+    "tsb": -57.3,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": 0.9,
+    "ve_at_anchor_delta_pct": 3.9,
+    "power_at_const_ve_delta_pct": 4.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-10",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +0.6%",
+    "W@constVE +0.4%",
+    "HRV -2.4% RHR -4.2 bpm",
+    "TSB -51.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -51.9"
+   ],
+   "signals": {
+    "tsb": -51.9,
+    "hrv_delta_pct": -2.4,
+    "rhr_delta_bpm": -4.2,
+    "ve_at_anchor_delta_pct": 0.6,
+    "power_at_const_ve_delta_pct": 0.4,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-11",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -1.6%",
+    "W@constVE -1.3%",
+    "HRV +4.2% RHR -3.4 bpm",
+    "TSB -48.6",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -48.6"
+   ],
+   "signals": {
+    "tsb": -48.6,
+    "hrv_delta_pct": 4.2,
+    "rhr_delta_bpm": -3.4,
+    "ve_at_anchor_delta_pct": -1.6,
+    "power_at_const_ve_delta_pct": -1.3,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 7,
+    "confidence": 0.3
+   }
+  },
+  {
+   "date": "2026-08-12",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +11.6%",
+    "W@constVE +5.5%",
+    "HRV +2.6% RHR -3.4 bpm",
+    "TSB -54.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -54.2"
+   ],
+   "signals": {
+    "tsb": -54.2,
+    "hrv_delta_pct": 2.6,
+    "rhr_delta_bpm": -3.4,
+    "ve_at_anchor_delta_pct": 11.6,
+    "power_at_const_ve_delta_pct": 5.5,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-13",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +0.3%",
+    "W@constVE +2.1%",
+    "HRV -0.6% RHR -4.4 bpm",
+    "TSB -51.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -51.7"
+   ],
+   "signals": {
+    "tsb": -51.7,
+    "hrv_delta_pct": -0.6,
+    "rhr_delta_bpm": -4.4,
+    "ve_at_anchor_delta_pct": 0.3,
+    "power_at_const_ve_delta_pct": 2.1,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-14",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -2.6%",
+    "W@constVE -2.7%",
+    "HRV -5.2% RHR -3.9 bpm",
+    "TSB -48.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -48.3"
+   ],
+   "signals": {
+    "tsb": -48.3,
+    "hrv_delta_pct": -5.2,
+    "rhr_delta_bpm": -3.9,
+    "ve_at_anchor_delta_pct": -2.6,
+    "power_at_const_ve_delta_pct": -2.7,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 10,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-08-15",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +2.5%",
+    "W@constVE +2.4%",
+    "HRV -6.5% RHR -4.3 bpm",
+    "TSB -53.5",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -53.5"
+   ],
+   "signals": {
+    "tsb": -53.5,
+    "hrv_delta_pct": -6.5,
+    "rhr_delta_bpm": -4.3,
+    "ve_at_anchor_delta_pct": 2.5,
+    "power_at_const_ve_delta_pct": 2.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-16",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor -7.2%",
+    "W@constVE -2.2%",
+    "HRV \u2014 RHR +3.1 bpm",
+    "TSB -49.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -49.7"
+   ],
+   "signals": {
+    "tsb": -49.7,
+    "hrv_delta_pct": null,
+    "rhr_delta_bpm": 3.1,
+    "ve_at_anchor_delta_pct": -7.2,
+    "power_at_const_ve_delta_pct": -2.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 2,
+    "confidence": 0.5
+   }
+  },
+  {
+   "date": "2026-08-17",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +7.6%",
+    "W@constVE +6.3%",
+    "HRV -0.5% RHR -4.1 bpm",
+    "TSB -45.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -45.3"
+   ],
+   "signals": {
+    "tsb": -45.3,
+    "hrv_delta_pct": -0.5,
+    "rhr_delta_bpm": -4.1,
+    "ve_at_anchor_delta_pct": 7.6,
+    "power_at_const_ve_delta_pct": 6.3,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 6,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-08-18",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +5.0%",
+    "W@constVE -3.4%",
+    "HRV -6.4% RHR -0.4 bpm",
+    "TSB -48.9",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -48.9"
+   ],
+   "signals": {
+    "tsb": -48.9,
+    "hrv_delta_pct": -6.4,
+    "rhr_delta_bpm": -0.4,
+    "ve_at_anchor_delta_pct": 5.0,
+    "power_at_const_ve_delta_pct": -3.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-19",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.7%",
+    "W@constVE -0.7%",
+    "HRV -13.1% RHR -1.5 bpm",
+    "TSB -54.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -54.0"
+   ],
+   "signals": {
+    "tsb": -54.0,
+    "hrv_delta_pct": -13.1,
+    "rhr_delta_bpm": -1.5,
+    "ve_at_anchor_delta_pct": 1.7,
+    "power_at_const_ve_delta_pct": -0.7,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 3,
+    "confidence": 0.5
+   }
+  },
+  {
+   "date": "2026-08-20",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +0.4%",
+    "W@constVE -5.3%",
+    "HRV +15.6% RHR +0.3 bpm",
+    "TSB -56.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB -56.7"
+   ],
+   "signals": {
+    "tsb": -56.7,
+    "hrv_delta_pct": 15.6,
+    "rhr_delta_bpm": 0.3,
+    "ve_at_anchor_delta_pct": 0.4,
+    "power_at_const_ve_delta_pct": -5.3,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-21",
+   "profile": "supercompensated",
+   "state": "supercompensated",
+   "reasons": [
+    "VE@anchor -12.9%",
+    "W@constVE -9.2%",
+    "HRV +44.1% RHR -4.4 bpm",
+    "TSB +28.3",
+    "WINDOW OPEN trough -68.2 \u2192 TSB +28.3, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": 28.3,
+    "hrv_delta_pct": 44.1,
+    "rhr_delta_bpm": -4.4,
+    "ve_at_anchor_delta_pct": -12.9,
+    "power_at_const_ve_delta_pct": -9.2,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-22",
+   "profile": "supercompensated",
+   "state": "supercompensated",
+   "reasons": [
+    "VE@anchor -17.1%",
+    "W@constVE -9.8%",
+    "HRV +44.1% RHR -2.7 bpm",
+    "TSB +15.2",
+    "WINDOW OPEN trough -57.6 \u2192 TSB +15.2, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": 15.2,
+    "hrv_delta_pct": 44.1,
+    "rhr_delta_bpm": -2.7,
+    "ve_at_anchor_delta_pct": -17.1,
+    "power_at_const_ve_delta_pct": -9.8,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-23",
+   "profile": "adapting_well",
+   "state": "adapting_well",
+   "reasons": [
+    "VE@anchor -17.3%",
+    "W@constVE +8.7%",
+    "HRV +19.1% RHR -9.8 bpm",
+    "TSB +13.7",
+    "WINDOW OPEN trough -50.7 \u2192 TSB +13.7, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": 13.7,
+    "hrv_delta_pct": 19.1,
+    "rhr_delta_bpm": -9.8,
+    "ve_at_anchor_delta_pct": -17.3,
+    "power_at_const_ve_delta_pct": 8.7,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": {
+    "days": 3,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-08-24",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +4.2%",
+    "W@constVE +2.3%",
+    "HRV +13.4% RHR -3.5 bpm",
+    "TSB +8.2",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +8.2"
+   ],
+   "signals": {
+    "tsb": 8.2,
+    "hrv_delta_pct": 13.4,
+    "rhr_delta_bpm": -3.5,
+    "ve_at_anchor_delta_pct": 4.2,
+    "power_at_const_ve_delta_pct": 2.3,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": true,
+    "signature": [
+     "ve_bad",
+     "hrv_good"
+    ],
+    "verdict": "mixed signals \u2014 prioritize metabolic readiness."
+   },
+   "steer": "mixed signals \u2014 keep Z2 capped at ~65% FTP, no threshold/VO2",
+   "forecast": {
+    "days": 13,
+    "confidence": 0.7
+   }
+  },
+  {
+   "date": "2026-08-25",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +1.5%",
+    "W@constVE +1.4%",
+    "HRV +4.4% RHR -4.8 bpm",
+    "TSB +9.7",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +9.7"
+   ],
+   "signals": {
+    "tsb": 9.7,
+    "hrv_delta_pct": 4.4,
+    "rhr_delta_bpm": -4.8,
+    "ve_at_anchor_delta_pct": 1.5,
+    "power_at_const_ve_delta_pct": 1.4,
+    "ve_stale_days": 0
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 4,
+    "confidence": 0.8
+   }
+  },
+  {
+   "date": "2026-08-26",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +8.8%",
+    "W@constVE +2.7%",
+    "HRV -8.2% RHR +2.7 bpm",
+    "TSB +13.5",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +13.5"
+   ],
+   "signals": {
+    "tsb": 13.5,
+    "hrv_delta_pct": -8.2,
+    "rhr_delta_bpm": 2.7,
+    "ve_at_anchor_delta_pct": 8.8,
+    "power_at_const_ve_delta_pct": 2.7,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-27",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +3.7%",
+    "W@constVE -0.5%",
+    "HRV -4.8% RHR -2.4 bpm",
+    "TSB +15.0",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +15.0"
+   ],
+   "signals": {
+    "tsb": 15.0,
+    "hrv_delta_pct": -4.8,
+    "rhr_delta_bpm": -2.4,
+    "ve_at_anchor_delta_pct": 3.7,
+    "power_at_const_ve_delta_pct": -0.5,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 8,
+    "confidence": 0.5
+   }
+  },
+  {
+   "date": "2026-08-28",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +8.7%",
+    "W@constVE +4.5%",
+    "HRV +4.6% RHR +2.0 bpm",
+    "TSB +14.4",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +14.4"
+   ],
+   "signals": {
+    "tsb": 14.4,
+    "hrv_delta_pct": 4.6,
+    "rhr_delta_bpm": 2.0,
+    "ve_at_anchor_delta_pct": 8.7,
+    "power_at_const_ve_delta_pct": 4.5,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 8,
+    "confidence": 0.6
+   }
+  },
+  {
+   "date": "2026-08-29",
+   "profile": "normal",
+   "state": "normal",
+   "reasons": [
+    "VE@anchor +10.4%",
+    "W@constVE -1.9%",
+    "HRV -12.8% RHR \u2014",
+    "TSB +16.3",
+    "RECOVERY HRV ok, VE not yet reversing; TSB +16.3"
+   ],
+   "signals": {
+    "tsb": 16.3,
+    "hrv_delta_pct": -12.8,
+    "rhr_delta_bpm": null,
+    "ve_at_anchor_delta_pct": 10.4,
+    "power_at_const_ve_delta_pct": -1.9,
+    "ve_stale_days": 2
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "steady endurance \u2014 keep Z2, no forced intensity",
+   "forecast": {
+    "days": 13,
+    "confidence": 0.4
+   }
+  },
+  {
+   "date": "2026-08-30",
+   "profile": "adapting_well",
+   "state": "adapting_well",
+   "reasons": [
+    "VE@anchor -10.4%",
+    "W@constVE +5.7%",
+    "HRV +27.9% RHR -5.1 bpm",
+    "TSB +18.0",
+    "WINDOW OPEN trough -56.3 \u2192 TSB +18.0, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": 18,
+    "hrv_delta_pct": 27.9,
+    "rhr_delta_bpm": -5.1,
+    "ve_at_anchor_delta_pct": -10.4,
+    "power_at_const_ve_delta_pct": 5.7,
+    "ve_stale_days": 1
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  },
+  {
+   "date": "2026-08-31",
+   "profile": "supercompensated",
+   "state": "supercompensated",
+   "reasons": [
+    "VE@anchor -15.8%",
+    "W@constVE -8.7%",
+    "HRV +58.5% RHR -3.0 bpm",
+    "TSB +11.2",
+    "WINDOW OPEN trough -63.5 \u2192 TSB 11.2, HRV ok, VE improving"
+   ],
+   "signals": {
+    "tsb": 11.2,
+    "hrv_delta_pct": 58.5,
+    "rhr_delta_bpm": -3.0,
+    "ve_at_anchor_delta_pct": -15.8,
+    "power_at_const_ve_delta_pct": -8.7,
+    "ve_stale_days": 3
+   },
+   "discrepancy": {
+    "conflict": false,
+    "signature": [],
+    "verdict": ""
+   },
+   "steer": "supercomp window open \u2014 intensity ok, hit your target watts",
+   "forecast": null
+  }
+ ]
+}
