@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/dashboard/Header";
+import { TodayCard } from "@/components/dashboard/TodayCard";
+import { HeatStrip } from "@/components/dashboard/HeatStrip";
+import { Charts } from "@/components/dashboard/Charts";
+import { HistoryTable } from "@/components/dashboard/HistoryTable";
+import { Legend } from "@/components/dashboard/Legend";
+import { profiles, today } from "@/lib/snapshot";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Breathing Readiness — Athlete Recovery Dashboard" },
+      {
+        name: "description",
+        content:
+          "Explainable fatigue and recovery dashboard fusing ventilatory efficiency, HRV/RHR and training load to answer: should you train hard today?",
+      },
+      { property: "og:title", content: "Breathing Readiness — Athlete Recovery Dashboard" },
+      {
+        property: "og:description",
+        content:
+          "Ventilatory efficiency, overnight autonomics and training load fused into one explainable daily readiness call.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Dashboard,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Dashboard() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="mx-auto w-full max-w-7xl space-y-5 px-4 py-8 sm:px-6 sm:py-12">
+      <Header />
+      {today && <TodayCard day={today} />}
+      <HeatStrip days={profiles} />
+      <Charts days={profiles} />
+      <HistoryTable days={profiles} />
+      <Legend />
+    </main>
   );
 }
