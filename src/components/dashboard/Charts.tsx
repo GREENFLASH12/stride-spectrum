@@ -1,6 +1,5 @@
+import { useState } from "react";
 import {
-  Area,
-  AreaChart,
   CartesianGrid,
   Line,
   LineChart,
@@ -41,6 +40,23 @@ const axis = {
   axisLine: false,
 } as const;
 
+type MetricKey = "ve" | "pw" | "hrv" | "rhr" | "tsb";
+
+const METRICS: {
+  key: MetricKey;
+  name: string;
+  short: string;
+  color: string;
+  dash?: string;
+  hint: string;
+}[] = [
+  { key: "ve", name: "VE @ anchor %", short: "VE Δ%", color: "var(--lime)", hint: "neg = good" },
+  { key: "pw", name: "W @ const VE %", short: "W Δ%", color: "var(--cyan)", dash: "4 4", hint: "power economy" },
+  { key: "hrv", name: "HRV Δ%", short: "HRV Δ%", color: "#7dd3fc", hint: "recovery" },
+  { key: "rhr", name: "RHR Δ bpm", short: "RHR Δ", color: "var(--amber)", hint: "neg = good" },
+  { key: "tsb", name: "TSB", short: "TSB", color: "#c4b5fd", dash: "6 3", hint: "+ = fresh" },
+];
+
 function ChartTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
   return (
@@ -59,176 +75,110 @@ function ChartTooltip({ active, payload, label }: any) {
   );
 }
 
-function Panel({
-  title,
-  subtitle,
-  current,
-  children,
-}: {
-  title: string;
-  subtitle: string;
-  current?: { label: string; value: number | null; color: string }[];
-  children: React.ReactNode;
-}) {
-  return (
-    <section className="panel p-5 sm:p-6">
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <div>
-          <h2 className="text-base font-semibold">{title}</h2>
-          <span className="text-[0.7rem] text-muted-foreground">{subtitle}</span>
-        </div>
-        {current && (
-          <div className="flex items-baseline gap-4">
-            {current.map((c) => (
-              <div key={c.label} className="text-right">
-                <div className="num text-lg font-bold leading-none" style={{ color: c.color }}>
-                  {fmt(c.value)}
-                </div>
-                <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
-                  {c.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      <div className="mt-4 h-56 w-full">{children}</div>
-    </section>
-  );
+function lastValue(data: Row[], key: MetricKey): number | null {
+  for (let i = data.length - 1; i >= 0; i--) {
+    const v = data[i]?.[key];
+    if (v !== null && v !== undefined) return v;
+  }
+  return null;
 }
 
 export function Charts({ days }: { days: DayProfile[] }) {
   const data = toRows(days);
+  const [visible, setVisible] = useState<Record<MetricKey, boolean>>({
+    ve: true,
+    pw: true,
+    hrv: true,
+    rhr: false,
+    tsb: true,
+  });
+
+  const toggle = (key: MetricKey) =>
+    setVisible((v) => {
+      const next = { ...v, [key]: !v[key] };
+      // never allow zero visible metrics
+      if (!Object.values(next).some(Boolean)) return v;
+      return next;
+    });
+
+  const active = METRICS.filter((m) => visible[m.key]);
   const tick = { ...axis, minTickGap: 32 };
-  const last = ([...data].reverse().find((r) => r.ve !== null || r.pw !== null) ?? data[data.length - 1])!;
-  const lastAuto = ([...data].reverse().find((r) => r.hrv !== null || r.rhr !== null) ?? data[data.length - 1])!;
-  const lastTsb = ([...data].reverse().find((r) => r.tsb !== null) ?? data[data.length - 1])!;
 
   return (
-    <div className="grid gap-5 lg:grid-cols-2">
-      <Panel
-        title="Breathing economy"
-        subtitle="negative = more economical"
-        current={[
-          { label: "VE Δ%", value: last.ve, color: "var(--lime)" },
-          { label: "W Δ%", value: last.pw, color: "var(--cyan)" },
-        ]}
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
-            <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
-            <XAxis dataKey="label" {...tick} />
-            <YAxis {...axis} width={40} />
-            <ReferenceLine y={0} stroke="var(--border)" />
-            <Tooltip content={<ChartTooltip />} cursor={{ stroke: "var(--border)" }} />
-            <Line
-              name="VE @ anchor %"
-              type="monotone"
-              dataKey="ve"
-              stroke="var(--lime)"
-              strokeWidth={2}
-              dot={false}
-              connectNulls
-            />
-            <Line
-              name="W @ const VE %"
-              type="monotone"
-              dataKey="pw"
-              stroke="var(--cyan)"
-              strokeWidth={1.5}
-              strokeDasharray="4 4"
-              dot={false}
-              connectNulls
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </Panel>
+    <section className="panel p-5 sm:p-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <div>
+          <h2 className="text-base font-semibold">Signal blend</h2>
+          <span className="text-[0.7rem] text-muted-foreground">
+            all metrics on one axis — tap the chips to blend them in or out
+          </span>
+        </div>
+        <div className="flex items-baseline gap-4">
+          {active.map((m) => (
+            <div key={m.key} className="text-right">
+              <div className="num text-lg font-bold leading-none" style={{ color: m.color }}>
+                {fmt(lastValue(data, m.key))}
+              </div>
+              <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
+                {m.short}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
-      <Panel
-        title="Autonomic status"
-        subtitle="HRV % · RHR bpm"
-        current={[
-          { label: "HRV Δ%", value: lastAuto.hrv, color: "var(--cyan)" },
-          { label: "RHR Δ", value: lastAuto.rhr, color: "var(--amber)" },
-        ]}
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
-            <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
-            <XAxis dataKey="label" {...tick} />
-            <YAxis {...axis} width={40} />
-            <ReferenceLine y={0} stroke="var(--border)" />
-            <Tooltip content={<ChartTooltip />} cursor={{ stroke: "var(--border)" }} />
-            <Line
-              name="HRV Δ%"
-              type="monotone"
-              dataKey="hrv"
-              stroke="var(--cyan)"
-              strokeWidth={2}
-              dot={false}
-              connectNulls
-            />
-            <Line
-              name="RHR Δ bpm"
-              type="monotone"
-              dataKey="rhr"
-              stroke="var(--amber)"
-              strokeWidth={1.5}
-              dot={false}
-              connectNulls
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      </Panel>
-
-      <section className="panel p-5 sm:p-6 lg:col-span-2">
-        <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <div>
-            <h2 className="text-base font-semibold">Freshness balance (TSB)</h2>
-            <span className="text-[0.7rem] text-muted-foreground">
-              above zero = fresh · below = fatigued
-            </span>
-          </div>
-          <div className="text-right">
-            <div
-              className="num text-lg font-bold leading-none"
-              style={{ color: "var(--lime)" }}
+      <div className="mt-4 flex flex-wrap gap-2">
+        {METRICS.map((m) => {
+          const on = visible[m.key];
+          return (
+            <button
+              key={m.key}
+              type="button"
+              onClick={() => toggle(m.key)}
+              aria-pressed={on}
+              className="toy-btn flex items-center gap-2 px-3 py-1.5 text-xs font-semibold"
+              style={
+                on
+                  ? { background: m.color, borderColor: m.color, color: "#0b0e0c" }
+                  : { color: m.color, opacity: 0.55 }
+              }
+              title={m.hint}
             >
-              {fmt(lastTsb.tsb)}
-            </div>
-            <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
-              TSB today
-            </div>
-          </div>
-        </div>
-        <div className="mt-4 h-64 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
-              <defs>
-                <linearGradient id="tsbFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="var(--lime)" stopOpacity={0.5} />
-                  <stop offset="55%" stopColor="var(--lime)" stopOpacity={0.05} />
-                  <stop offset="100%" stopColor="var(--bad)" stopOpacity={0.18} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid stroke="var(--border)" strokeOpacity={0.3} vertical={false} />
-              <XAxis dataKey="label" {...tick} />
-              <YAxis {...axis} width={40} />
-              <ReferenceLine y={0} stroke="var(--muted-foreground)" strokeDasharray="3 3" />
-              <Tooltip content={<ChartTooltip />} cursor={{ stroke: "var(--border)" }} />
-              <Area
-                name="TSB"
-                type="monotone"
-                dataKey="tsb"
-                stroke="var(--lime)"
-                strokeWidth={2}
-                fill="url(#tsbFill)"
-                connectNulls
+              <span
+                className="inline-block size-2 rounded-full"
+                style={{ background: on ? "#0b0e0c" : m.color }}
               />
-            </AreaChart>
-          </ResponsiveContainer>
-        </div>
-      </section>
-    </div>
+              {m.name}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="mt-4 h-72 w-full">
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart data={data} margin={{ top: 6, right: 8, left: -10, bottom: 0 }}>
+            <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
+            <XAxis dataKey="label" {...tick} />
+            <YAxis {...axis} width={48} />
+            <ReferenceLine y={0} stroke="var(--border)" />
+            <Tooltip content={<ChartTooltip />} cursor={{ stroke: "var(--border)" }} />
+            {active.map((m) => (
+              <Line
+                key={m.key}
+                name={m.name}
+                type="monotone"
+                dataKey={m.key}
+                stroke={m.color}
+                strokeWidth={m.dash ? 1.5 : 2}
+                strokeDasharray={m.dash}
+                dot={false}
+                connectNulls
+                isAnimationActive={false}
+              />
+            ))}
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
   );
 }
