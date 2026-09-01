@@ -100,9 +100,9 @@ function Panel({
 export function Charts({ days }: { days: DayProfile[] }) {
   const data = toRows(days);
   const tick = { ...axis, minTickGap: 32 };
-  const last = [...data].reverse().find((r) => r.ve !== null || r.pw !== null) ?? data[data.length - 1];
-  const lastAuto = [...data].reverse().find((r) => r.hrv !== null || r.rhr !== null) ?? data[data.length - 1];
-  const lastTsb = [...data].reverse().find((r) => r.tsb !== null) ?? data[data.length - 1];
+  const last = ([...data].reverse().find((r) => r.ve !== null || r.pw !== null) ?? data[data.length - 1])!;
+  const lastAuto = ([...data].reverse().find((r) => r.hrv !== null || r.rhr !== null) ?? data[data.length - 1])!;
+  const lastTsb = ([...data].reverse().find((r) => r.tsb !== null) ?? data[data.length - 1])!;
 
   return (
     <div className="grid gap-5 lg:grid-cols-2">
