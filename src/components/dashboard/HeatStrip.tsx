@@ -10,14 +10,14 @@ import {
 
 export function HeatStrip({ days }: { days: DayProfile[] }) {
   const [active, setActive] = useState<DayProfile | null>(null);
-  const shown = active ?? days[days.length - 1];
+  const shown = active ?? days[days.length - 1] ?? null;
 
   return (
     <section className="panel p-5 sm:p-6">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="text-base font-semibold">Readiness history</h2>
         <span className="text-xs text-muted-foreground">
-          {days.length} days · {days[0].date} → {days[days.length - 1].date}
+          {days.length} days · {days[0]?.date} → {days[days.length - 1]?.date}
         </span>
       </div>
 
