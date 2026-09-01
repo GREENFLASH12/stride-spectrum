@@ -144,7 +144,14 @@ export function Charts({ days }: { days: DayProfile[] }) {
         </ResponsiveContainer>
       </Panel>
 
-      <Panel title="Autonomic status" subtitle="HRV % · RHR bpm">
+      <Panel
+        title="Autonomic status"
+        subtitle="HRV % · RHR bpm"
+        current={[
+          { label: "HRV Δ%", value: lastAuto.hrv, color: "var(--cyan)" },
+          { label: "RHR Δ", value: lastAuto.rhr, color: "var(--amber)" },
+        ]}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
             <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
