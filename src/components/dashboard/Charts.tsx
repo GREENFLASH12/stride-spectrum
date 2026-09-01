@@ -62,17 +62,35 @@ function ChartTooltip({ active, payload, label }: any) {
 function Panel({
   title,
   subtitle,
+  current,
   children,
 }: {
   title: string;
   subtitle: string;
+  current?: { label: string; value: number | null; color: string }[];
   children: React.ReactNode;
 }) {
   return (
     <section className="panel p-5 sm:p-6">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-base font-semibold">{title}</h2>
-        <span className="text-[0.7rem] text-muted-foreground">{subtitle}</span>
+        <div>
+          <h2 className="text-base font-semibold">{title}</h2>
+          <span className="text-[0.7rem] text-muted-foreground">{subtitle}</span>
+        </div>
+        {current && (
+          <div className="flex items-baseline gap-4">
+            {current.map((c) => (
+              <div key={c.label} className="text-right">
+                <div className="num text-lg font-bold leading-none" style={{ color: c.color }}>
+                  {fmt(c.value)}
+                </div>
+                <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
+                  {c.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <div className="mt-4 h-56 w-full">{children}</div>
     </section>
@@ -82,10 +100,20 @@ function Panel({
 export function Charts({ days }: { days: DayProfile[] }) {
   const data = toRows(days);
   const tick = { ...axis, minTickGap: 32 };
+  const last = ([...data].reverse().find((r) => r.ve !== null || r.pw !== null) ?? data[data.length - 1])!;
+  const lastAuto = ([...data].reverse().find((r) => r.hrv !== null || r.rhr !== null) ?? data[data.length - 1])!;
+  const lastTsb = ([...data].reverse().find((r) => r.tsb !== null) ?? data[data.length - 1])!;
 
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      <Panel title="Breathing economy" subtitle="negative = more economical">
+      <Panel
+        title="Breathing economy"
+        subtitle="negative = more economical"
+        current={[
+          { label: "VE Δ%", value: last.ve, color: "var(--lime)" },
+          { label: "W Δ%", value: last.pw, color: "var(--cyan)" },
+        ]}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
             <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
@@ -116,7 +144,14 @@ export function Charts({ days }: { days: DayProfile[] }) {
         </ResponsiveContainer>
       </Panel>
 
-      <Panel title="Autonomic status" subtitle="HRV % · RHR bpm">
+      <Panel
+        title="Autonomic status"
+        subtitle="HRV % · RHR bpm"
+        current={[
+          { label: "HRV Δ%", value: lastAuto.hrv, color: "var(--cyan)" },
+          { label: "RHR Δ", value: lastAuto.rhr, color: "var(--amber)" },
+        ]}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
             <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
@@ -148,10 +183,23 @@ export function Charts({ days }: { days: DayProfile[] }) {
 
       <section className="panel p-5 sm:p-6 lg:col-span-2">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="text-base font-semibold">Freshness balance (TSB)</h2>
-          <span className="text-[0.7rem] text-muted-foreground">
-            above zero = fresh · below = fatigued
-          </span>
+          <div>
+            <h2 className="text-base font-semibold">Freshness balance (TSB)</h2>
+            <span className="text-[0.7rem] text-muted-foreground">
+              above zero = fresh · below = fatigued
+            </span>
+          </div>
+          <div className="text-right">
+            <div
+              className="num text-lg font-bold leading-none"
+              style={{ color: "var(--lime)" }}
+            >
+              {fmt(lastTsb.tsb)}
+            </div>
+            <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
+              TSB today
+            </div>
+          </div>
         </div>
         <div className="mt-4 h-64 w-full">
           <ResponsiveContainer width="100%" height="100%">

@@ -14,6 +14,7 @@ const FILTERS: { id: Filter; label: string; btn: string }[] = [
 export function HistoryTable({ days }: { days: DayProfile[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [open, setOpen] = useState<string | null>(null);
+  const [collapsed, setCollapsed] = useState(true);
 
   const rows = useMemo(() => {
     const desc = [...days].reverse();
@@ -28,23 +29,40 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
 
   return (
     <section className="panel p-5 sm:p-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-base font-semibold">Day-by-day log</h2>
-        <div className="flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
-            <button
-              key={f.id}
-              type="button"
-              onClick={() => setFilter(f.id)}
-              className={`toy-btn ${filter === f.id ? f.btn : ""}`}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <button
+        type="button"
+        onClick={() => setCollapsed((c) => !c)}
+        className="flex w-full flex-wrap items-center justify-between gap-3 text-left"
+        aria-expanded={!collapsed}
+      >
+        <span className="flex items-baseline gap-2">
+          <h2 className="text-base font-semibold">Day-by-day log</h2>
+          <span className="num text-[0.7rem] text-muted-foreground">{days.length} days</span>
+        </span>
+        <span
+          className={`toy-btn toy-btn-cyan transition-transform ${collapsed ? "" : "rotate-180"}`}
+          aria-hidden
+        >
+          ▼
+        </span>
+      </button>
 
-      <div className="mt-4 overflow-x-auto">
+      {!collapsed && (
+        <>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {FILTERS.map((f) => (
+              <button
+                key={f.id}
+                type="button"
+                onClick={() => setFilter(f.id)}
+                className={`toy-btn ${filter === f.id ? f.btn : ""}`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-4 overflow-x-auto">
         <table className="w-full min-w-[46rem] border-separate border-spacing-y-1 text-sm">
           <thead>
             <tr className="text-left text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground">
@@ -109,12 +127,14 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
             })}
           </tbody>
         </table>
-      </div>
+          </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">
-        Showing <span className="num">{rows.length}</span> of{" "}
-        <span className="num">{days.length}</span> days
-      </p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Showing <span className="num">{rows.length}</span> of{" "}
+            <span className="num">{days.length}</span> days
+          </p>
+        </>
+      )}
     </section>
   );
 }
