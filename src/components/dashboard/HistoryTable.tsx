@@ -127,12 +127,14 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
             })}
           </tbody>
         </table>
-      </div>
+          </div>
 
-      <p className="mt-3 text-xs text-muted-foreground">
-        Showing <span className="num">{rows.length}</span> of{" "}
-        <span className="num">{days.length}</span> days
-      </p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Showing <span className="num">{rows.length}</span> of{" "}
+            <span className="num">{days.length}</span> days
+          </p>
+        </>
+      )}
     </section>
   );
 }
