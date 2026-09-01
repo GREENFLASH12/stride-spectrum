@@ -62,17 +62,35 @@ function ChartTooltip({ active, payload, label }: any) {
 function Panel({
   title,
   subtitle,
+  current,
   children,
 }: {
   title: string;
   subtitle: string;
+  current?: { label: string; value: number | null; color: string }[];
   children: React.ReactNode;
 }) {
   return (
     <section className="panel p-5 sm:p-6">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-base font-semibold">{title}</h2>
-        <span className="text-[0.7rem] text-muted-foreground">{subtitle}</span>
+        <div>
+          <h2 className="text-base font-semibold">{title}</h2>
+          <span className="text-[0.7rem] text-muted-foreground">{subtitle}</span>
+        </div>
+        {current && (
+          <div className="flex items-baseline gap-4">
+            {current.map((c) => (
+              <div key={c.label} className="text-right">
+                <div className="num text-lg font-bold leading-none" style={{ color: c.color }}>
+                  {fmt(c.value)}
+                </div>
+                <div className="mt-0.5 text-[0.6rem] uppercase tracking-wider text-muted-foreground">
+                  {c.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
       <div className="mt-4 h-56 w-full">{children}</div>
     </section>
