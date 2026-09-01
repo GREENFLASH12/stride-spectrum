@@ -14,6 +14,7 @@ const FILTERS: { id: Filter; label: string; btn: string }[] = [
 export function HistoryTable({ days }: { days: DayProfile[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [open, setOpen] = useState<string | null>(null);
+  const [collapsed, setCollapsed] = useState(true);
 
   const rows = useMemo(() => {
     const desc = [...days].reverse();
