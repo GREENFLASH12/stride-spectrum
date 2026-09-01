@@ -100,10 +100,20 @@ function Panel({
 export function Charts({ days }: { days: DayProfile[] }) {
   const data = toRows(days);
   const tick = { ...axis, minTickGap: 32 };
+  const last = [...data].reverse().find((r) => r.ve !== null || r.pw !== null) ?? data[data.length - 1];
+  const lastAuto = [...data].reverse().find((r) => r.hrv !== null || r.rhr !== null) ?? data[data.length - 1];
+  const lastTsb = [...data].reverse().find((r) => r.tsb !== null) ?? data[data.length - 1];
 
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      <Panel title="Breathing economy" subtitle="negative = more economical">
+      <Panel
+        title="Breathing economy"
+        subtitle="negative = more economical"
+        current={[
+          { label: "VE Δ%", value: last.ve, color: "var(--lime)" },
+          { label: "W Δ%", value: last.pw, color: "var(--cyan)" },
+        ]}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
             <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
