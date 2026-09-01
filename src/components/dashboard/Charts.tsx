@@ -156,10 +156,10 @@ export function Charts({ days }: { days: DayProfile[] }) {
 
       <div className="mt-4 h-72 w-full">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 6, right: 8, left: -18, bottom: 0 }}>
+          <LineChart data={data} margin={{ top: 6, right: 8, left: -10, bottom: 0 }}>
             <CartesianGrid stroke="var(--border)" strokeOpacity={0.35} vertical={false} />
             <XAxis dataKey="label" {...tick} />
-            <YAxis {...axis} width={40} />
+            <YAxis {...axis} width={48} />
             <ReferenceLine y={0} stroke="var(--border)" />
             <Tooltip content={<ChartTooltip />} cursor={{ stroke: "var(--border)" }} />
             {active.map((m) => (
