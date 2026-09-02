@@ -33,10 +33,13 @@ export const Route = createFileRoute("/")({
 });
 
 function Dashboard() {
+  const states = zoneStates(profiles);
   return (
     <main className="mx-auto w-full max-w-7xl space-y-5 px-4 py-8 sm:px-6 sm:py-12">
       <Header />
       {today && <TodayCard day={today} />}
+      <ThresholdCards states={states} />
+      {today && <ReadinessCards day={today} states={states} />}
       <HeatStrip days={profiles} />
       <Charts days={profiles} />
       <HistoryTable days={profiles} />
