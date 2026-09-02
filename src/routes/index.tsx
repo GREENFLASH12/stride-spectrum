@@ -5,7 +5,10 @@ import { HeatStrip } from "@/components/dashboard/HeatStrip";
 import { Charts } from "@/components/dashboard/Charts";
 import { HistoryTable } from "@/components/dashboard/HistoryTable";
 import { Legend } from "@/components/dashboard/Legend";
+import { ThresholdCards } from "@/components/dashboard/ThresholdCards";
+import { ReadinessCards } from "@/components/dashboard/ReadinessCards";
 import { profiles, today } from "@/lib/snapshot";
+import { zoneStates } from "@/lib/metrics";
 
 export const Route = createFileRoute("/")({
   head: () => ({
