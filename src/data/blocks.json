@@ -1,0 +1,873 @@
+{
+ "ftp_reference": 285,
+ "sessions": [
+  {
+   "date": "2026-05-26",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 172,
+     "avg_ve_lmin": 63.3,
+     "avg_hr_bpm": 126
+    }
+   ]
+  },
+  {
+   "date": "2026-05-28",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 175,
+     "avg_ve_lmin": 59.2,
+     "avg_hr_bpm": 128
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 206,
+     "avg_ve_lmin": 87.6,
+     "avg_hr_bpm": 149
+    }
+   ]
+  },
+  {
+   "date": "2026-05-30",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 176,
+     "avg_ve_lmin": 64.3,
+     "avg_hr_bpm": 126
+    }
+   ]
+  },
+  {
+   "date": "2026-06-01",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 179,
+     "avg_ve_lmin": 65.0,
+     "avg_hr_bpm": 128
+    }
+   ]
+  },
+  {
+   "date": "2026-06-03",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 183,
+     "avg_ve_lmin": 58.7,
+     "avg_hr_bpm": 129
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 210,
+     "avg_ve_lmin": 84.3,
+     "avg_hr_bpm": 149
+    }
+   ]
+  },
+  {
+   "date": "2026-06-05",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 181,
+     "avg_ve_lmin": 59.5,
+     "avg_hr_bpm": 128
+    }
+   ]
+  },
+  {
+   "date": "2026-06-07",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 175,
+     "avg_ve_lmin": 61.9,
+     "avg_hr_bpm": 125
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 206,
+     "avg_ve_lmin": 84.5,
+     "avg_hr_bpm": 152
+    }
+   ]
+  },
+  {
+   "date": "2026-06-09",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 62.0,
+     "avg_hr_bpm": 127
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 210,
+     "avg_ve_lmin": 90.0,
+     "avg_hr_bpm": 152
+    }
+   ]
+  },
+  {
+   "date": "2026-06-11",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 61.5,
+     "avg_hr_bpm": 129
+    }
+   ]
+  },
+  {
+   "date": "2026-06-13",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 64.4,
+     "avg_hr_bpm": 125
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 212,
+     "avg_ve_lmin": 89.3,
+     "avg_hr_bpm": 149
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 262,
+     "avg_ve_lmin": 110.5,
+     "avg_hr_bpm": 172
+    }
+   ]
+  },
+  {
+   "date": "2026-06-15",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 63.5,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 217,
+     "avg_ve_lmin": 87.5,
+     "avg_hr_bpm": 151
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 261,
+     "avg_ve_lmin": 120.5,
+     "avg_hr_bpm": 173
+    }
+   ]
+  },
+  {
+   "date": "2026-06-17",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 179,
+     "avg_ve_lmin": 58.0,
+     "avg_hr_bpm": 128
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 216,
+     "avg_ve_lmin": 91.1,
+     "avg_hr_bpm": 152
+    }
+   ]
+  },
+  {
+   "date": "2026-06-19",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 175,
+     "avg_ve_lmin": 61.9,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-06-21",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 172,
+     "avg_ve_lmin": 58.1,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 218,
+     "avg_ve_lmin": 82.6,
+     "avg_hr_bpm": 149
+    }
+   ]
+  },
+  {
+   "date": "2026-06-23",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 182,
+     "avg_ve_lmin": 57.8,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 215,
+     "avg_ve_lmin": 89.5,
+     "avg_hr_bpm": 152
+    }
+   ]
+  },
+  {
+   "date": "2026-06-25",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 59.8,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 220,
+     "avg_ve_lmin": 90.0,
+     "avg_hr_bpm": 148
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 255,
+     "avg_ve_lmin": 111.6,
+     "avg_hr_bpm": 168
+    }
+   ]
+  },
+  {
+   "date": "2026-06-27",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 58.7,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 212,
+     "avg_ve_lmin": 84.3,
+     "avg_hr_bpm": 150
+    }
+   ]
+  },
+  {
+   "date": "2026-06-29",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 179,
+     "avg_ve_lmin": 60.3,
+     "avg_hr_bpm": 127
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 217,
+     "avg_ve_lmin": 81.2,
+     "avg_hr_bpm": 152
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 268,
+     "avg_ve_lmin": 119.2,
+     "avg_hr_bpm": 171
+    }
+   ]
+  },
+  {
+   "date": "2026-07-01",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 175,
+     "avg_ve_lmin": 57.4,
+     "avg_hr_bpm": 127
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 206,
+     "avg_ve_lmin": 81.2,
+     "avg_hr_bpm": 148
+    }
+   ]
+  },
+  {
+   "date": "2026-07-03",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 57.0,
+     "avg_hr_bpm": 123
+    }
+   ]
+  },
+  {
+   "date": "2026-07-05",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 171,
+     "avg_ve_lmin": 58.9,
+     "avg_hr_bpm": 123
+    }
+   ]
+  },
+  {
+   "date": "2026-07-07",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 57.3,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 211,
+     "avg_ve_lmin": 83.4,
+     "avg_hr_bpm": 147
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 270,
+     "avg_ve_lmin": 119.6,
+     "avg_hr_bpm": 168
+    }
+   ]
+  },
+  {
+   "date": "2026-07-09",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 171,
+     "avg_ve_lmin": 56.9,
+     "avg_hr_bpm": 125
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 210,
+     "avg_ve_lmin": 87.5,
+     "avg_hr_bpm": 147
+    }
+   ]
+  },
+  {
+   "date": "2026-07-11",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 183,
+     "avg_ve_lmin": 59.6,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-07-13",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 170,
+     "avg_ve_lmin": 59.4,
+     "avg_hr_bpm": 128
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 220,
+     "avg_ve_lmin": 85.9,
+     "avg_hr_bpm": 147
+    }
+   ]
+  },
+  {
+   "date": "2026-07-15",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 172,
+     "avg_ve_lmin": 60.9,
+     "avg_hr_bpm": 125
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 219,
+     "avg_ve_lmin": 82.4,
+     "avg_hr_bpm": 147
+    }
+   ]
+  },
+  {
+   "date": "2026-07-17",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 184,
+     "avg_ve_lmin": 61.3,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 219,
+     "avg_ve_lmin": 85.9,
+     "avg_hr_bpm": 147
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 263,
+     "avg_ve_lmin": 110.5,
+     "avg_hr_bpm": 165
+    }
+   ]
+  },
+  {
+   "date": "2026-07-19",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 57.3,
+     "avg_hr_bpm": 126
+    }
+   ]
+  },
+  {
+   "date": "2026-07-21",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 176,
+     "avg_ve_lmin": 61.6,
+     "avg_hr_bpm": 127
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 222,
+     "avg_ve_lmin": 82.2,
+     "avg_hr_bpm": 146
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 256,
+     "avg_ve_lmin": 108.1,
+     "avg_hr_bpm": 166
+    }
+   ]
+  },
+  {
+   "date": "2026-07-23",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 182,
+     "avg_ve_lmin": 60.8,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 216,
+     "avg_ve_lmin": 85.9,
+     "avg_hr_bpm": 145
+    }
+   ]
+  },
+  {
+   "date": "2026-07-25",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 182,
+     "avg_ve_lmin": 60.3,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 213,
+     "avg_ve_lmin": 80.1,
+     "avg_hr_bpm": 150
+    }
+   ]
+  },
+  {
+   "date": "2026-07-27",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 181,
+     "avg_ve_lmin": 61.4,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-07-29",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 183,
+     "avg_ve_lmin": 59.7,
+     "avg_hr_bpm": 123
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 207,
+     "avg_ve_lmin": 79.5,
+     "avg_hr_bpm": 150
+    }
+   ]
+  },
+  {
+   "date": "2026-07-31",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 172,
+     "avg_ve_lmin": 60.2,
+     "avg_hr_bpm": 127
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 216,
+     "avg_ve_lmin": 81.1,
+     "avg_hr_bpm": 148
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 254,
+     "avg_ve_lmin": 104.7,
+     "avg_hr_bpm": 170
+    }
+   ]
+  },
+  {
+   "date": "2026-08-02",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 177,
+     "avg_ve_lmin": 60.7,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 220,
+     "avg_ve_lmin": 85.2,
+     "avg_hr_bpm": 146
+    }
+   ]
+  },
+  {
+   "date": "2026-08-04",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 174,
+     "avg_ve_lmin": 56.2,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-08-06",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 176,
+     "avg_ve_lmin": 55.4,
+     "avg_hr_bpm": 126
+    }
+   ]
+  },
+  {
+   "date": "2026-08-08",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 176,
+     "avg_ve_lmin": 58.1,
+     "avg_hr_bpm": 126
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 212,
+     "avg_ve_lmin": 85.5,
+     "avg_hr_bpm": 147
+    }
+   ]
+  },
+  {
+   "date": "2026-08-10",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 177,
+     "avg_ve_lmin": 54.4,
+     "avg_hr_bpm": 123
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 208,
+     "avg_ve_lmin": 77.2,
+     "avg_hr_bpm": 148
+    }
+   ]
+  },
+  {
+   "date": "2026-08-12",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 176,
+     "avg_ve_lmin": 58.8,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-08-14",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 177,
+     "avg_ve_lmin": 57.6,
+     "avg_hr_bpm": 125
+    }
+   ]
+  },
+  {
+   "date": "2026-08-16",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 55.5,
+     "avg_hr_bpm": 122
+    }
+   ]
+  },
+  {
+   "date": "2026-08-18",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 177,
+     "avg_ve_lmin": 57.4,
+     "avg_hr_bpm": 124
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 221,
+     "avg_ve_lmin": 80.4,
+     "avg_hr_bpm": 147
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 262,
+     "avg_ve_lmin": 108.6,
+     "avg_hr_bpm": 167
+    }
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 177,
+     "avg_ve_lmin": 56.7,
+     "avg_hr_bpm": 125
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 217,
+     "avg_ve_lmin": 84.0,
+     "avg_hr_bpm": 149
+    }
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 178,
+     "avg_ve_lmin": 59.5,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 171,
+     "avg_ve_lmin": 56.2,
+     "avg_hr_bpm": 121
+    }
+   ]
+  },
+  {
+   "date": "2026-08-26",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 171,
+     "avg_ve_lmin": 57.5,
+     "avg_hr_bpm": 124
+    }
+   ]
+  },
+  {
+   "date": "2026-08-28",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 172,
+     "avg_ve_lmin": 57.7,
+     "avg_hr_bpm": 123
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 208,
+     "avg_ve_lmin": 83.3,
+     "avg_hr_bpm": 148
+    },
+    {
+     "zone": "vt2",
+     "minutes": 8,
+     "avg_watts": 256,
+     "avg_ve_lmin": 112.5,
+     "avg_hr_bpm": 164
+    }
+   ]
+  },
+  {
+   "date": "2026-08-30",
+   "blocks": [
+    {
+     "zone": "endurance",
+     "minutes": 40,
+     "avg_watts": 184,
+     "avg_ve_lmin": 58.3,
+     "avg_hr_bpm": 121
+    },
+    {
+     "zone": "vt1",
+     "minutes": 20,
+     "avg_watts": 213,
+     "avg_ve_lmin": 79.9,
+     "avg_hr_bpm": 144
+    }
+   ]
+  }
+ ]
+}
