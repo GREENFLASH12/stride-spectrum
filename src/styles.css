@@ -146,68 +146,56 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    background-image:
-      radial-gradient(60rem 40rem at 12% -10%, oklch(0.87 0.2 128 / 0.07), transparent 70%),
-      radial-gradient(50rem 40rem at 95% 0%, oklch(0.78 0.15 220 / 0.08), transparent 70%);
-    background-attachment: fixed;
   }
 
   h1, h2, h3 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
 }
 
 @utility panel {
-  background-color: color-mix(in oklab, var(--surface) 78%, transparent);
+  background-color: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-panel);
-  backdrop-filter: blur(6px);
+  border-radius: var(--radius-lg);
 }
 
+/* Flat Bauhaus control: square-ish, hairline, no lift, no glow. */
 @utility toy-btn {
-  border-radius: 999px;
-  font-weight: 600;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
   font-size: 0.8125rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid color-mix(in oklab, var(--foreground) 12%, transparent);
-  background-color: var(--surface-2);
+  letter-spacing: 0.01em;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  background-color: transparent;
   color: var(--muted-foreground);
-  box-shadow: 0 4px 0 0 oklch(0.12 0.01 250);
-  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+  transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
 
   &:hover {
     color: var(--foreground);
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(3px);
-    box-shadow: 0 1px 0 0 oklch(0.12 0.01 250);
+    border-color: color-mix(in oklab, var(--foreground) 30%, transparent);
   }
 }
 
 @utility toy-btn-lime {
   background-color: var(--lime);
   color: var(--lime-foreground);
-  border-color: transparent;
-  box-shadow: 0 4px 0 0 oklch(0.55 0.15 130), var(--glow-lime);
+  border-color: var(--lime);
 }
 
 @utility toy-btn-cyan {
   background-color: var(--cyan);
   color: var(--cyan-foreground);
-  border-color: transparent;
-  box-shadow: 0 4px 0 0 oklch(0.5 0.12 225);
+  border-color: var(--cyan);
 }
 
 @utility toy-btn-amber {
   background-color: var(--amber);
   color: var(--amber-foreground);
-  border-color: transparent;
-  box-shadow: 0 4px 0 0 oklch(0.55 0.13 70);
+  border-color: var(--amber);
 }
+
 
 @utility num {
   font-family: var(--font-mono);
