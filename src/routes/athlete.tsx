@@ -126,7 +126,7 @@ function AthletePage() {
             <div key={z.key} className="rounded-2xl border border-border bg-surface/60 p-4">
               <span
                 className="rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider"
-                style={{ background: z.color, color: "#0b0e0c" }}
+                style={{ background: z.color, color: "var(--background)" }}
               >
                 {z.label}
               </span>

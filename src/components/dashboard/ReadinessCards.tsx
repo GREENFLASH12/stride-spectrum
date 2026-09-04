@@ -68,7 +68,7 @@ export function ReadinessCards({ day, states }: { day: DayProfile; states: ZoneS
           <div className="flex-1 space-y-2">
             <div
               className="inline-block rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider"
-              style={{ background: ringColor, color: "#0b0e0c" }}
+              style={{ background: ringColor, color: "var(--background)" }}
             >
               {rec.label}
             </div>

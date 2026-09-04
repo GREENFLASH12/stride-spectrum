@@ -110,25 +110,26 @@ export function TodayCard({ day }: { day: DayProfile }) {
           }
         />
         <StatTile
-          label="VE @ anchor"
+          label="Breathing"
           value={fmt(s.ve_at_anchor_delta_pct)}
           unit="%"
-          hint="− = more economical"
+          hint="air used for the same effort"
           tone={veTone(s.ve_at_anchor_delta_pct)}
         />
         <StatTile
-          label="W @ const VE"
+          label="Power"
           value={fmt(s.power_at_const_ve_delta_pct)}
           unit="%"
-          hint="power at fixed breath"
+          hint="watts for the same breathing"
         />
         <StatTile
-          label="VE freshness"
+          label="Ride data"
           value={String(s.ve_stale_days)}
           unit={s.ve_stale_days === 1 ? "day old" : "days old"}
-          hint={s.ve_stale_days > 2 ? "stale ride data" : "recent ride data"}
+          hint={s.ve_stale_days > 2 ? "getting stale" : "recent"}
           tone={s.ve_stale_days > 2 ? "warn" : "neutral"}
         />
+
       </div>
 
       <div className="relative mt-6 flex flex-wrap items-center gap-3">
