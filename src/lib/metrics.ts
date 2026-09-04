@@ -179,3 +179,123 @@ export function supercompWindow(day: DayProfile): WindowEstimate {
     note: "No window projected — signals not converging yet.",
   };
 }
+
+/* ------------------------------------------------------------------ *
+ * Series used by the charts. Everything below is derived from lap
+ * averages (blocks.json) or the daily signal snapshot.
+ * ------------------------------------------------------------------ */
+
+export type ZonePoint = {
+  date: string;
+  /** Composite efficiency index; 100 = same as the opening baseline. */
+  index: number;
+  /** Sub-components, all indexed to 100 at baseline, higher = better. */
+  power: number;
+  breathing: number;
+  heartRate: number;
+};
+
+function smooth(xs: number[], n = 3): number[] {
+  return xs.map((_, i) => {
+    const from = Math.max(0, i - n + 1);
+    const win = xs.slice(from, i + 1);
+    return win.reduce((a, b) => a + b, 0) / win.length;
+  });
+}
+
+/**
+ * Per-session efficiency for one zone, built from the lap averages of the
+ * blocks ridden in that zone. Power indexed up, breathing and heart rate
+ * indexed down (less air / fewer beats for the work = higher index).
+ */
+export function zoneIndexSeries(zone: Zone): ZonePoint[] {
+  const raw: { date: string; w: number; ve: number; hr: number }[] = [];
+  for (const s of sessions) {
+    const bs = s.blocks.filter((b) => b.zone === zone);
+    if (!bs.length) continue;
+    const mins = bs.reduce((a, b) => a + b.minutes, 0) || 1;
+    const wavg = (f: (b: Block) => number) =>
+      bs.reduce((a, b) => a + f(b) * b.minutes, 0) / mins;
+    raw.push({
+      date: s.date,
+      w: wavg((b) => b.avg_watts),
+      ve: wavg((b) => b.avg_ve_lmin),
+      hr: wavg((b) => b.avg_hr_bpm),
+    });
+  }
+  if (raw.length < 2) return [];
+
+  const base = raw.slice(0, Math.min(5, raw.length));
+  const baseW = avg(base.map((r) => r.w))!;
+  const baseVe = avg(base.map((r) => r.ve))!;
+  const baseHr = avg(base.map((r) => r.hr))!;
+
+  const power = smooth(raw.map((r) => (r.w / baseW) * 100));
+  const breathing = smooth(raw.map((r) => (baseVe / r.ve) * (r.w / baseW) * 100));
+  const heartRate = smooth(raw.map((r) => (baseHr / r.hr) * (r.w / baseW) * 100));
+
+  return raw.map((r, i) => ({
+    date: r.date,
+    index: Math.round((0.45 * breathing[i]! + 0.35 * heartRate[i]! + 0.2 * power[i]!) * 10) / 10,
+    power: Math.round(power[i]! * 10) / 10,
+    breathing: Math.round(breathing[i]! * 10) / 10,
+    heartRate: Math.round(heartRate[i]! * 10) / 10,
+  }));
+}
+
+/** Latest value of the zone index, or null when there is not enough data. */
+export function zoneIndexNow(zone: Zone): number | null {
+  const s = zoneIndexSeries(zone);
+  return s.length ? s[s.length - 1]!.index : null;
+}
+
+export type LoadPoint = { date: string; fitness: number; fatigue: number; form: number };
+
+/**
+ * Fitness / fatigue / form from daily training load.
+ * Load per session = minutes × (watts / FTP)² × 100, summed over lap blocks.
+ */
+export function loadSeries(days: DayProfile[] = profiles): LoadPoint[] {
+  const ftp = (blocksData as { ftp_reference: number }).ftp_reference || 250;
+  const byDate = new Map<string, number>();
+  for (const s of sessions) {
+    const load = s.blocks.reduce(
+      (a, b) => a + b.minutes * Math.pow(b.avg_watts / ftp, 2) * (100 / 60),
+      0,
+    );
+    byDate.set(s.date, (byDate.get(s.date) ?? 0) + load);
+  }
+
+  let ctl = 0;
+  let atl = 0;
+  const out: LoadPoint[] = [];
+  for (const d of days) {
+    const load = byDate.get(d.date) ?? 0;
+    ctl += (load - ctl) / 42;
+    atl += (load - atl) / 7;
+    out.push({
+      date: d.date,
+      fitness: Math.round(ctl * 10) / 10,
+      fatigue: Math.round(atl * 10) / 10,
+      form: Math.round((ctl - atl) * 10) / 10,
+    });
+  }
+  return out;
+}
+
+export type RecoveryPoint = {
+  date: string;
+  score: number;
+  hrv: number | null;
+  rhr: number | null;
+};
+
+/** Recovery score with its autonomic inputs alongside it. */
+export function recoverySeries(days: DayProfile[] = profiles): RecoveryPoint[] {
+  return days.map((d) => ({
+    date: d.date,
+    score: recoveryScore(d).score,
+    hrv: d.signals.hrv_delta_pct,
+    rhr: d.signals.rhr_delta_bpm,
+  }));
+}
