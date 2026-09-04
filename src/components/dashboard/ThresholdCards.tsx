@@ -56,7 +56,7 @@ export function ThresholdCards({ states }: { states: ZoneState[] }) {
             <div className="flex items-center justify-between">
               <span
                 className="rounded-full px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider"
-                style={{ background: accent, color: "#0b0e0c" }}
+                style={{ background: accent, color: "var(--background)" }}
               >
                 {ZONE_LABEL[s.zone]}
               </span>

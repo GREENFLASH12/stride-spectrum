@@ -5,7 +5,7 @@ export function Header() {
     <header className="flex flex-wrap items-end justify-between gap-4">
       <div>
         <div className="flex items-center gap-3">
-          <span className="inline-flex size-9 items-center justify-center rounded-2xl bg-lime text-lime-foreground shadow-[0_4px_0_0_oklch(0.55_0.15_130)]">
+          <span className="inline-flex size-9 items-center justify-center rounded-sm bg-amber text-amber-foreground">
             <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3 13h4l2-6 3 12 2.5-8 1.8 4H21" />
             </svg>
