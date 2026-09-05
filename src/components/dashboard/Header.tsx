@@ -2,31 +2,22 @@ import { snap } from "@/lib/snapshot";
 
 export function Header() {
   return (
-    <header className="flex flex-wrap items-end justify-between gap-4">
-      <div>
-        <div className="flex items-center gap-3">
-          <span className="inline-flex size-9 items-center justify-center rounded-sm bg-amber text-amber-foreground">
-            <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 13h4l2-6 3 12 2.5-8 1.8 4H21" />
-            </svg>
-          </span>
-          <h1 className="text-2xl font-semibold sm:text-3xl">Breathing Readiness</h1>
-        </div>
-        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-          Ventilatory efficiency, overnight autonomics and training load fused into one
-          explainable answer: should you train hard today?
-        </p>
+    <header className="flex items-center justify-between gap-4">
+      <div className="flex items-center gap-3">
+        <span className="inline-flex size-8 items-center justify-center rounded-sm bg-amber text-amber-foreground">
+          <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 13h4l2-6 3 12 2.5-8 1.8 4H21" />
+          </svg>
+        </span>
+        <span className="text-lg font-semibold tracking-tight">Breathing Readiness</span>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2 text-[0.7rem]">
-        <span className="num rounded-full bg-surface-2 px-3 py-1.5 text-muted-foreground">
+      <div className="flex items-center gap-2 text-[0.65rem]">
+        <span className="num rounded-full border border-border bg-surface px-2.5 py-1 text-muted-foreground">
           {snap.athlete}
         </span>
-        <span className="num rounded-full bg-cyan/15 px-3 py-1.5 text-cyan">
-          engine v{snap.engine}
-        </span>
-        <span className="num rounded-full bg-surface-2 px-3 py-1.5 text-muted-foreground">
-          generated {snap.generated_at.replace("T", " ").replace("Z", " UTC")}
+        <span className="num rounded-full border border-cyan/30 bg-cyan/10 px-2.5 py-1 text-cyan">
+          v{snap.engine}
         </span>
       </div>
     </header>
