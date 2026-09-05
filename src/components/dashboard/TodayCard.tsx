@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ProfileBadge } from "./ProfileBadge";
 import { StatTile } from "./StatTile";
 import {
-  DASH,
   PROFILE_BLURB,
   fmt,
   longDate,
