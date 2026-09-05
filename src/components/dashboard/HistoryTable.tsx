@@ -68,9 +68,9 @@ export function HistoryTable({ days }: { days: DayProfile[] }) {
             <tr className="text-left text-[0.65rem] uppercase tracking-[0.12em] text-muted-foreground">
               <th className="px-3 py-2 font-semibold">Date</th>
               <th className="px-3 py-2 font-semibold">Profile</th>
-              <th className="px-3 py-2 text-right font-semibold">TSB</th>
-              <th className="px-3 py-2 text-right font-semibold">HRV Δ%</th>
-              <th className="px-3 py-2 text-right font-semibold">VE Δ%</th>
+              <th className="px-3 py-2 text-right font-semibold">Form</th>
+              <th className="px-3 py-2 text-right font-semibold">HRV</th>
+              <th className="px-3 py-2 text-right font-semibold">Breathing</th>
               <th className="px-3 py-2 font-semibold">Steer</th>
               <th className="px-3 py-2" />
             </tr>
