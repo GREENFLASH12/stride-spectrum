@@ -49,12 +49,12 @@ export function HeatStrip({ days }: { days: DayProfile[] }) {
           <span className={GROUP_STYLES[groupOf(shown)].text}>
             {PROFILE_LABELS[shown.profile] ?? shown.profile}
           </span>
-          <span className="num text-muted-foreground">TSB {fmt(shown.signals.tsb)}</span>
+          <span className="num text-muted-foreground">Form {fmt(shown.signals.tsb)}</span>
           <span className="num text-muted-foreground">
             HRV {fmt(shown.signals.hrv_delta_pct)}%
           </span>
           <span className="num text-muted-foreground">
-            VE {fmt(shown.signals.ve_at_anchor_delta_pct)}%
+            Breathing {fmt(shown.signals.ve_at_anchor_delta_pct)}%
           </span>
         </div>
       )}

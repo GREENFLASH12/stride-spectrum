@@ -71,11 +71,11 @@ export function ThresholdCards({ states }: { states: ZoneState[] }) {
             </div>
 
             <div className="mt-3">
-              <Trend label="Watts" now={s.watts} prev={s.prevWatts} unit="W" lowerIsBetter={false} />
-              <Trend label="Ventilation" now={s.ve} prev={s.prevVe} unit="L/min" digits={1} lowerIsBetter />
+              <Trend label="Power" now={s.watts} prev={s.prevWatts} unit="W" lowerIsBetter={false} />
+              <Trend label="Breathing" now={s.ve} prev={s.prevVe} unit="L/min" digits={1} lowerIsBetter />
               <Trend label="Heart rate" now={s.hr} prev={s.prevHr} unit="bpm" lowerIsBetter />
               <Trend
-                label="VE per watt"
+                label="Air per watt"
                 now={s.cost}
                 prev={s.prevCost}
                 unit="L/W"
