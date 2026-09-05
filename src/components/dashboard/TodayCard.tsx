@@ -48,33 +48,27 @@ export function TodayCard({ day }: { day: DayProfile }) {
         <ProfileBadge profile={day.profile} size="lg" />
       </div>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_auto]">
-        <div>
-          <h1 className="max-w-3xl text-3xl font-semibold leading-[1.1] sm:text-4xl lg:text-5xl">
-            {day.steer}
-          </h1>
-          <p className="mt-2 max-w-xl text-sm text-muted-foreground">
-            {PROFILE_BLURB[day.profile] ?? ""}
-          </p>
-        </div>
-
-        {day.forecast ? (
-          <div className="flex items-start gap-3 rounded-xl border border-lime/30 bg-lime/10 px-4 py-3 lg:max-w-xs">
-            <span className="mt-1 inline-block size-2 rounded-full bg-lime" />
-            <div>
-              <div className="text-xs font-semibold text-lime">Supercompensation window</div>
-              <p className="mt-0.5 text-xs text-muted-foreground">
-                Opens in ~<span className="num font-semibold text-foreground">{day.forecast.days}</span> days · confidence{" "}
-                <span className="num font-semibold text-foreground">{day.forecast.confidence.toFixed(1)}</span>
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="flex items-center gap-2 rounded-xl border border-border bg-surface-2/40 px-4 py-3 text-xs text-muted-foreground">
-            Forecast {DASH}
-          </div>
-        )}
+      <div className="mt-6">
+        <h1 className="max-w-3xl text-3xl font-semibold leading-[1.1] sm:text-4xl lg:text-5xl">
+          {day.steer}
+        </h1>
+        <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+          {PROFILE_BLURB[day.profile] ?? ""}
+        </p>
       </div>
+
+      {day.forecast && (
+        <div className="mt-5 flex items-start gap-3 rounded-xl border border-lime/30 bg-lime/10 px-4 py-3 lg:max-w-xs">
+          <span className="mt-1 inline-block size-2 rounded-full bg-lime" />
+          <div>
+            <div className="text-xs font-semibold text-lime">Supercompensation window</div>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              Opens in ~<span className="num font-semibold text-foreground">{day.forecast.days}</span> days · confidence{" "}
+              <span className="num font-semibold text-foreground">{day.forecast.confidence.toFixed(1)}</span>
+            </p>
+          </div>
+        </div>
+      )}
 
       {day.discrepancy.conflict && (
         <div className="mt-5 flex items-start gap-3 rounded-xl border border-warn/40 bg-warn/10 px-4 py-3">
